@@ -19,7 +19,6 @@ def test_authorization_with_valid_credentianals(driver):
     driver.find_element(*REG_BUTTON).click()
     WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located((ENTER)))
     assert driver.current_url == LOGIN_URL
-    #driver.quit()
 
 
 def test_authorization_with_password_less_6_symbols(driver):
@@ -31,4 +30,3 @@ def test_authorization_with_password_less_6_symbols(driver):
     # Нажимаем кнопку "Зарегистрироваться" и проверяем, что отобразилась ошибка
     driver.find_element(*REG_BUTTON).click()
     assert driver.find_element(*INCORRECT_PASSWORD).text == "Некорректный пароль"
-    driver.quit()

@@ -25,4 +25,3 @@ def test_logout(driver):
     #Задаем ожидание, пока не убедимся, что попали на страницу логина
     WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(ENTER))
     assert driver.current_url == LOGIN_URL
-    driver.quit()

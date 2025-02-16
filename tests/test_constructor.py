@@ -15,7 +15,6 @@ def test_click_on_fillings(driver):
         expected_conditions.presence_of_element_located(FILLING_TITLE))
     #Проверяем, что отображается заголовок "начинки" отображается в видимой части
     assert filling_element.is_displayed()
-    driver.quit()
 
 
 def test_click_on_sauce(driver):
@@ -28,7 +27,6 @@ def test_click_on_sauce(driver):
         expected_conditions.presence_of_element_located(SAUCE_TITLE))
     # Проверяем, что отображается заголовок "Соусы" отображается в видимой части
     assert sauce_element.is_displayed()
-    driver.quit()
 
 
 def test_click_on_buns(driver):
@@ -42,4 +40,3 @@ def test_click_on_buns(driver):
         expected_conditions.presence_of_element_located(BUN_TITLE))
     #Проверяем, что отображается заголовок "Булки" отображается в видимой части
     assert bun_element.is_displayed()
-    driver.quit()

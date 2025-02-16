@@ -25,7 +25,6 @@ def test_redirect_on_constructor_click_constructor_button(driver):
     #Переходим в конструктор по кнопке "Конструктор"
     driver.find_element(*CONSTRUCTOR_BUTTON).click()
     assert driver.find_element(*PLACE_ORDER).text == "Оформить заказ"
-    driver.quit()
 
 
 def test_redirect_on_constructor_click_burger_logo(driver):
@@ -49,4 +48,3 @@ def test_redirect_on_constructor_click_burger_logo(driver):
     #Переходим в конструктор по кнопке логотипу Stellar Burgers
     driver.find_element(*BURGER_LOGO).click()
     assert driver.find_element(*PLACE_ORDER).text == "Оформить заказ"
-    driver.quit()

@@ -18,7 +18,6 @@ def test_login_from_main_page(driver):
     driver.find_element(*AUTH_BUTTON).click()
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(PLACE_ORDER))
     assert driver.find_element(*PLACE_ORDER).text == "Оформить заказ"
-    driver.quit()
 
 def test_login_from_personal_account_button(driver):
     # Переходим на главную страницу
@@ -34,7 +33,6 @@ def test_login_from_personal_account_button(driver):
     driver.find_element(*AUTH_BUTTON).click()
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(PLACE_ORDER))
     assert driver.find_element(*PLACE_ORDER).text == "Оформить заказ"
-    driver.quit()
 
 
 def test_login_from_registration_button(driver):
@@ -51,7 +49,6 @@ def test_login_from_registration_button(driver):
     driver.find_element(*AUTH_BUTTON).click()
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(PLACE_ORDER))
     assert driver.find_element(*PLACE_ORDER).text == "Оформить заказ"
-    driver.quit()
 
 
 def test_login_from_restore_password_form(driver):
@@ -68,4 +65,3 @@ def test_login_from_restore_password_form(driver):
     driver.find_element(*AUTH_BUTTON).click()
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(PLACE_ORDER))
     assert driver.find_element(*PLACE_ORDER).text == "Оформить заказ"
-    driver.quit()
